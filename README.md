@@ -10,7 +10,7 @@
 **Embedded Firmware & Hardware · UAV & Autonomous Systems**  
 B.Sc. Computer Science · University of Cape Coast, Ghana · Expected May 2027
 
-[GitHub](https://github.com/Evans-Kwashie) · [LinkedIn](https://www.linkedin.com/in/evans-klenam-kwashie-seyram/) · [Portfolio](https://pcb-portfolio.vercel.app)
+[LinkedIn](https://www.linkedin.com/in/evans-klenam-kwashie-seyram/) · [Portfolio](https://pcb-portfolio.vercel.app)
 
 I build the electronics and firmware that make physical systems work. My work spans custom PCBs, microcontroller firmware, sensor interfaces and system bring-up — from schematic and layout through debugging and integration.
 
