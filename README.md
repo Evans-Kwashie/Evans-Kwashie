@@ -1,82 +1,83 @@
 <div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
-    <img src="assets/hero.svg" alt="Evans Kwashie — embedded firmware, hardware design and autonomous systems" width="100%">
-  </picture>
+  <img src="assets/flight-deck.svg" alt="Evans Kwashie — embedded systems, firmware, hardware and autonomous systems" width="100%">
 </div>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/evans-klenam-kwashie-seyram/">LinkedIn</a>
-  &nbsp;·&nbsp;
+  <a href="https://github.com/Evans-Kwashie">GitHub</a> &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/evans-klenam-kwashie-seyram/">LinkedIn</a> &nbsp;·&nbsp;
   <a href="https://pcb-portfolio.vercel.app">Hardware Portfolio</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/Evans-Kwashie">GitHub</a>
 </div>
 
-# Evans Kwashie
-### Embedded Firmware & Hardware · UAV & Autonomous Systems
+## `001 / MISSION BRIEF`
 
 I build the electronics and firmware behind physical systems — from circuit design and PCB layout to peripheral bring-up, low-level drivers and system integration.
 
-I'm a Computer Science student at the **University of Cape Coast, Ghana**, focused on embedded C/C++, microcontrollers, custom hardware and autonomous systems.
+My focus is **embedded firmware, custom hardware, sensing, motion and UAV systems**.
 
----
+**Embedded Firmware & Hardware · UAV & Autonomous Systems**  
+B.Sc. Computer Science · University of Cape Coast, Ghana
 
-## 01 / Selected engineering work
+```text
+$ systemctl status evans
 
-| PROJECT | WHAT I BUILT |
+HARDWARE       ● active    KiCad / multilayer PCB / board bring-up
+FIRMWARE       ● active    C / C++ / STM32 / ESP32
+INTERFACES     ● active    UART / I²C / SPI / RS-485 / BLE
+RTOS           ◉ learning  Zephyr RTOS
+EMBEDDED LINUX ◉ learning  Linux internals / boot flow / low-level systems
+```
+
+## `002 / FLIGHT & CONTROL`
+
+| PROJECT | BUILD NOTES |
 |:--|:--|
-| [**UAV-PHMC**](https://github.com/Evans-Kwashie/UAV-PHMC) | Custom four-layer STM32G071-based UAV controller hardware. Includes power monitoring, protected I/O, UART/I²C/RS-485 interfaces, BOM, Gerbers, pick-and-place data and a 3D PCB model. |
-| [**STM32C031 Bare-Metal Firmware**](https://github.com/Evans-Kwashie/stm32c031-baremetal-firmware) | Register-level C with CMSIS: GPIO, TIM3 interrupts and a USART1 command interface. CMake + GNU Arm toolchain, with a NUCLEO-C031C6 Wokwi setup. |
-| [**INA219 Voltage Sensing PCB**](https://github.com/Evans-Kwashie/INA219-Voltage_Sensing_PCB) | Four-layer current and power-monitoring board with Kelvin-sense shunt routing, analogue filtering and I²C. |
-| [**UART-to-RS-485 PCB**](https://github.com/Evans-Kwashie/UART-2-RS-485-PCB) | Differential serial interface hardware with protection for field communication. |
-| [**CH340C USB-to-UART**](https://github.com/Evans-Kwashie/CH340c-usb-uart-board) | USB-to-UART interface board and an early end-to-end schematic-to-PCB build. |
-| [**ESP32 Air Mouse**](https://github.com/Evans-Kwashie/Esp32-Air-Mouse) | Wearable BLE HID mouse using MPU6050 motion sensing, Kalman filtering and gesture-based input. |
-| [**Gyroscope-Controlled Car**](https://github.com/Evans-Kwashie/Gyroscope-Controlled-Car) | Motion-controlled vehicle using IMU orientation and ESP-NOW communication. |
-| [**Tiny Tanks**](https://github.com/Evans-Kwashie/Tiny-Tanks) | Dual-board embedded control project paired with a 3D-printed chassis. |
-
-> **UAV-PHMC status:** the repository contains the KiCad design and generated manufacturing outputs. Fabrication, assembly and flight validation are not claimed.
-
-## 02 / Engineering workflow
-
-I enjoy working across the hardware/software boundary:
-
-`SPEC → SCHEMATIC → PCB LAYOUT → BRING-UP → FIRMWARE → INTEGRATION`
+| [**UAV-PHMC**](https://github.com/Evans-Kwashie/UAV-PHMC) | Custom four-layer STM32G071 UAV controller PCB with power monitoring, protected I/O and UART / I²C / RS-485 interfaces. Includes design files and generated manufacturing outputs. |
+| **Search & Rescue UAV** | Team concept integrating flight-control electronics, mission computing, thermal imaging, GPS and telemetry. |
 
 <div align="center">
-  <img src="assets/signal-path.svg" alt="Embedded system signal path from sensors through a microcontroller to control and actuation" width="100%">
+  <img src="assets/signal-path.svg" alt="Sensor to MCU to control to actuator signal path" width="100%">
 </div>
 
-| AREA | EXPERIENCE & TOOLS |
+## `003 / HARDWARE BOARDS`
+
+| PROJECT | ENGINEERING FOCUS |
 |:--|:--|
-| **Firmware** | C · C++ · Embedded C · MicroPython · CMSIS · STM32 HAL |
-| **MCUs** | STM32 · ESP32 · RP2040 |
-| **Peripherals** | GPIO · interrupts · timers · PWM · UART · I²C · SPI · DMA |
+| [**INA219 Voltage Sensing PCB**](https://github.com/Evans-Kwashie/INA219-Voltage_Sensing_PCB) | Four-layer current and power-monitoring board; Kelvin-sense shunt routing, analogue filtering and I²C. |
+| [**UART-to-RS-485 PCB**](https://github.com/Evans-Kwashie/UART-2-RS-485-PCB) | Differential serial interface hardware with protection for field communication. |
+
+## `004 / FIRMWARE`
+
+| PROJECT | ENGINEERING FOCUS |
+|:--|:--|
+| [**Tiny-Tanks**](https://github.com/Evans-Kwashie/Tiny-Tanks) | Dual-board embedded control project paired with a 3D-printed chassis. |
+| **STM32C071 Low-Level Firmware** | Register-level STM32C071 firmware project. Repository link will be added when the existing-history repository is published. |
+
+## `005 / TEAM & COMMUNITY`
+
+**UCC IoT / MicroPython** — ESP32-S3 Mini Pro board-support and bring-up work connected to the UCC IoT course ecosystem and its MicroPython demonstrations.
+
+## `006 / ENGINEERING STACK`
+
+| DOMAIN | TOOLS & TECHNOLOGIES |
+|:--|:--|
+| **Firmware** | C · C++ · Embedded C · MicroPython · STM32 HAL · CMSIS |
+| **Platforms** | STM32 · ESP32 · RP2040 |
+| **Embedded** | GPIO · interrupts · timers · PWM · DMA · UART · I²C · SPI |
 | **Connectivity** | RS-485 · BLE · ESP-NOW · Wi-Fi · LoRa |
 | **Hardware** | KiCad · schematic capture · multilayer PCB layout · DRC · board bring-up |
-| **Build & debug** | CMake · Ninja · GNU Arm GCC · GDB · Git · Linux |
+| **Tooling** | Git · Linux · VS Code · CMake · Ninja · GNU Arm GCC · GDB |
 
-## 03 / Current workbench
+## `007 / CURRENT FLIGHT PLAN`
 
-- **Zephyr RTOS** — learning threads, scheduling, message queues and driver/application structure through hands-on projects.
+- **Zephyr RTOS** — learning threads, scheduling, message queues and driver/application structure.
 - **Embedded Linux** — building foundations in Linux internals, boot flow and low-level systems.
-- **Bare-metal STM32** — strengthening register-level peripheral control and understanding what happens beneath vendor HALs.
+- **STM32 bare-metal** — strengthening register-level peripheral control and understanding what happens beneath vendor HALs.
 - **UAV electronics** — developing practical experience in power distribution, sensing, interfaces and hardware integration.
 
-## 04 / Beyond the bench
-
-I'm also part of a team developing a **search-and-rescue UAV concept**, bringing together flight-control electronics, mission computing, thermal imaging, GPS and telemetry.
+## `008 / BUILD PHILOSOPHY`
 
 I value engineering that can be inspected, built, measured and debugged — not just code that compiles.
 
----
-
 <div align="center">
-  **DESIGN THE HARDWARE. UNDERSTAND THE FIRMWARE. MAKE THE SYSTEM WORK.**
-  <br><br>
-  <a href="https://github.com/Evans-Kwashie">GitHub</a>
-  &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/evans-klenam-kwashie-seyram/">LinkedIn</a>
-  &nbsp;·&nbsp;
-  <a href="https://pcb-portfolio.vercel.app">Portfolio</a>
+  <sub>MAKE THE HARDWARE REAL. MAKE THE FIRMWARE RELIABLE.</sub>
 </div>
