@@ -1,14 +1,9 @@
+<!-- if you are reading the source: hello. let's build something that flies. -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0b132b,60:1c2541,100:00e5a0&height=210&section=header&text=Evans&fontSize=64&fontColor=ffffff&fontAlignY=38&animation=fadeIn&desc=Embedded%20Systems%20%C2%B7%20Firmware%20%C2%B7%20Hardware%20%C2%B7%20UAV&descSize=18&descAlignY=60" alt="Evans banner" />
-
-<a href="https://github.com/Evans-Kwashie">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=20&pause=1200&color=00E5A0&center=true&vCenter=true&width=700&lines=Schematic+%E2%86%92+layout+%E2%86%92+bring-up+%E2%86%92+firmware;STM32+%C2%B7+ESP32+%C2%B7+RP2040;Flight+controllers+and+drone+payload+electronics;Making+hardware+and+firmware+talk+to+each+other" alt="Typing SVG" />
-</a>
+<img src="assets/hero.svg" alt="Evans: embedded systems, firmware, hardware and UAV" width="100%" />
 
 </div>
-
----
 
 ### `$ ./boot --profile evans`
 
@@ -22,6 +17,12 @@
 
 I design the board, write the firmware that runs on it, and debug the two together. My work sits where electronics meets flight: custom PCBs, sensor pipelines, and the embedded software that keeps a vehicle in the air.
 
+<div align="center">
+
+<img src="assets/hud.svg" alt="Animated drone flight deck with attitude indicator, heading tape, oscilloscope and telemetry" width="100%" />
+
+</div>
+
 ---
 
 ### 🛰️ Flight and UAV
@@ -30,6 +31,12 @@ I design the board, write the firmware that runs on it, and debug the two togeth
 |---|---|
 | [**UAV-PHMC**](https://github.com/Evans-Kwashie/UAV-PHMC) | Modular 4-layer payload management and health controller for a lightweight drone, built on an STM32G071 with a ROS 2 digital twin |
 | **SAR Drone** (in progress) | Team capstone: F450 quadcopter, STM32F405 flight controller, ESP32 mission computer, thermal camera, GPS and LoRa telemetry feeding a live rescue dashboard |
+
+<div align="center">
+
+<img src="assets/datapath.svg" alt="Data path from sensors through STM32 and ESP32 over LoRa to the ground dashboard" width="100%" />
+
+</div>
 
 ### 🔌 Custom boards
 
@@ -80,9 +87,3 @@ I design the board, write the firmware that runs on it, and debug the two togeth
 - Bringing up flight-controller firmware for the search-and-rescue drone
 - Building out payload electronics and telemetry for lightweight UAVs
 - Learning in public: every board and firmware project here started as a self-taught build
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00e5a0,40:1c2541,100:0b132b&height=110&section=footer" alt="footer" />
-
-</div>
