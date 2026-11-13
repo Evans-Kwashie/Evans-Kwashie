@@ -1,7 +1,12 @@
 <!-- if you are reading the source: hello. let's build something that flies. -->
 <div align="center">
 
-<img src="assets/hero.svg" alt="Evans: embedded systems, firmware, hardware and UAV" width="100%" />
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero-static.svg">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero-static-light.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero-light.svg">
+  <img src="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero.svg" alt="Evans: embedded systems, firmware, hardware and UAV" width="100%" />
+</picture>
 
 </div>
 
@@ -19,7 +24,12 @@ I design the board, write the firmware that runs on it, and debug the two togeth
 
 <div align="center">
 
-<img src="assets/hud.svg" alt="Animated drone flight deck with attitude indicator, heading tape, oscilloscope and telemetry" width="100%" />
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud-static.svg">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud-static-light.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud-light.svg">
+  <img src="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud.svg" alt="Animated drone flight deck with attitude indicator, heading tape, oscilloscope and telemetry" width="100%" />
+</picture>
 
 </div>
 
@@ -34,7 +44,12 @@ I design the board, write the firmware that runs on it, and debug the two togeth
 
 <div align="center">
 
-<img src="assets/datapath.svg" alt="Data path from sensors through STM32 and ESP32 over LoRa to the ground dashboard" width="100%" />
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath-static.svg">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath-static-light.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath-light.svg">
+  <img src="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath.svg" alt="Data path from sensors through STM32 and ESP32 over LoRa to the ground dashboard" width="100%" />
+</picture>
 
 </div>
 
@@ -81,6 +96,14 @@ I design the board, write the firmware that runs on it, and debug the two togeth
 **Hardware craft:** multi-layer PCB design · differential routing · TVS protection · Kelvin sensing · 3D-printed enclosures
 
 ---
+
+### 📡 Live from the bench
+
+<!-- LIVE:START -->
+```text
+$ git log --oneline   # first refresh pending
+```
+<!-- LIVE:END -->
 
 ### 🎯 Now
 
