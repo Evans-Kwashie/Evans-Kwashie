@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="220" viewBox="0 0 1200 220" role="img" aria-label="Design the board. Write the firmware. Bring the system to life.">
+<rect width="1200" height="220" rx="12" fill="#121212"/>
+<path d="M48 42H1152" stroke="#2c2c2c"/>
+<circle cx="76" cy="112" r="17" fill="#ff4436"/>
+<text x="118" y="122" font-family="Helvetica Neue,Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="-1" fill="#f2f0ea">Design the board. Write the firmware.</text>
+<text x="118" y="165" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" fill="#a3a3a3">Bring the system to life.</text>
+<path d="M48 190H1152" stroke="#2c2c2c"/>
+</svg>
