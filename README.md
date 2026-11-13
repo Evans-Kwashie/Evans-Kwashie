@@ -1,120 +1,75 @@
-<!-- if you are reading the source: hello. let's build something that flies. -->
 <div align="center">
-
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero-static.svg">
-  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero-static-light.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero-light.svg">
-  <img src="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hero.svg" alt="Evans: embedded systems, firmware, hardware and UAV" width="100%" />
-</picture>
-
+  <img src="assets/flight-deck.svg" alt="Evans Kwashie — embedded systems, firmware, hardware and autonomous systems" width="100%">
 </div>
 
-### `$ ./boot --profile evans`
+<div align="center">
+  <a href="https://github.com/Evans-Kwashie">GitHub</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/evans-klenam-kwashie-seyram/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://pcb-portfolio.vercel.app">Portfolio</a>
+</div>
+
+## `01 / MISSION BRIEF`
+
+I build the electronics and firmware behind physical systems — from a schematic and a blank microcontroller to a working board, a reliable interface, and an integrated machine. My focus is embedded firmware, custom hardware, sensing, motion and UAV systems.
+
+**Embedded Firmware & Hardware · UAV & Autonomous Systems**  
+B.Sc. Computer Science · University of Cape Coast, Ghana
 
 ```text
-[  OK  ] Hardware    schematic capture, 4-layer PCB layout, differential pairs, sensing front-ends
-[  OK  ] Firmware    C, C++, MicroPython on STM32, ESP32 and RP2040
-[  OK  ] Wireless    ESP-NOW, BLE HID, LoRa telemetry
-[  OK  ] UAV         flight controllers, payload electronics, ROS 2 digital twins
-[ RUN  ] Mission     low-cost modular search-and-rescue drone (team capstone)
+$ systemctl status evans
+HARDWARE     ● online   KiCad / multilayer PCB / bring-up
+FIRMWARE     ● online   C / C++ / STM32 / ESP32
+INTERFACES   ● online   UART / I2C / SPI / RS-485 / BLE
+RTOS         ◐ learning Zephyr / concurrency / message queues
+EMBEDDED OS  ◐ learning Linux / low-level systems
 ```
 
-I design the board, write the firmware that runs on it, and debug the two together. My work sits where electronics meets flight: custom PCBs, sensor pipelines, and the embedded software that keeps a vehicle in the air.
+## `02 / FLIGHT & CONTROL`
 
-<div align="center">
+| PROJECT | BUILD NOTES |
+|:--|:--|
+| [**UAV-PHMC**](https://github.com/Evans-Kwashie/UAV-PHMC) | 4-layer STM32G071 payload-management and health-monitoring controller; power monitoring, protected I/O and system interfaces |
+| **SAR Drone** · team capstone | Search-and-rescue quadcopter concept integrating flight-control electronics, mission computing, thermal imaging, GPS and LoRa telemetry |
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud-static.svg">
-  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud-static-light.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud-light.svg">
-  <img src="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/hud.svg" alt="Animated drone flight deck with attitude indicator, heading tape, oscilloscope and telemetry" width="100%" />
-</picture>
+<img src="assets/signal-path.svg" alt="Sensor to MCU to control to actuator signal path" width="100%">
 
-</div>
+## `03 / HARDWARE BUILDS`
 
----
+| PROJECT | ENGINEERING FOCUS |
+|:--|:--|
+| [**INA219 Voltage Sensing PCB**](https://github.com/Evans-Kwashie/INA219-Voltage_Sensing_PCB) | 4-layer current and power-monitoring board; Kelvin-sense shunt routing |
+| [**UART-2-RS-485-PCB**](https://github.com/Evans-Kwashie/UART-2-RS-485-PCB) | Differential serial interface with TVS protection |
+| [**CH340C USB-to-UART**](https://github.com/Evans-Kwashie/CH340c-usb-uart-board) | USB-to-UART interface; first fully self-designed PCB |
 
-### 🛰️ Flight and UAV
+## `04 / FIRMWARE & MOTION`
 
-| Project | What it is |
-|---|---|
-| [**UAV-PHMC**](https://github.com/Evans-Kwashie/UAV-PHMC) | Modular 4-layer payload management and health controller for a lightweight drone, built on an STM32G071 with a ROS 2 digital twin |
-| **SAR Drone** (in progress) | Team capstone: F450 quadcopter, STM32F405 flight controller, ESP32 mission computer, thermal camera, GPS and LoRa telemetry feeding a live rescue dashboard |
+| PROJECT | ENGINEERING FOCUS |
+|:--|:--|
+| [**Gyroscope-Controlled-Car**](https://github.com/Evans-Kwashie/Gyroscope-Controlled-Car) | MPU6050 hand-orientation sensing and ESP-NOW control |
+| [**ESP32 Air Mouse**](https://github.com/Evans-Kwashie/Esp32-Air-Mouse) | Kalman-filtered IMU data streamed as a BLE HID device |
+| [**Tiny Tanks**](https://github.com/Evans-Kwashie/Tiny-Tanks) | Dual-board real-time firmware and a 3D-printed snap-fit chassis |
 
-<div align="center">
+## `05 / ENGINEERING STACK`
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath-static.svg">
-  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath-static-light.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath-light.svg">
-  <img src="https://raw.githubusercontent.com/Evans-Kwashie/Evans-Kwashie/main/assets/datapath.svg" alt="Data path from sensors through STM32 and ESP32 over LoRa to the ground dashboard" width="100%" />
-</picture>
+| DOMAIN | TOOLS & TECHNOLOGIES |
+|:--|:--|
+| **Firmware** | C · C++ · MicroPython · STM32 HAL · ESP-IDF |
+| **Platforms** | STM32 · ESP32 · RP2040 |
+| **Embedded** | GPIO · interrupts · timers · PWM · DMA · UART · I²C · SPI |
+| **Connectivity** | RS-485 · BLE · ESP-NOW · Wi-Fi · LoRa |
+| **Hardware** | KiCad · schematic capture · multilayer PCB layout · DRC · bring-up |
+| **Tooling** | Git · Linux · VS Code · CMake · GDB |
 
-</div>
+## `06 / CURRENT FLIGHT PLAN`
 
-### 🔌 Custom boards
+- Developing firmware and payload electronics for a search-and-rescue UAV.
+- Learning Zephyr RTOS through threads, message queues and application design.
+- Strengthening embedded Linux and low-level systems foundations.
 
-| Board | What it does |
-|---|---|
-| [**INA219 Voltage Sensing PCB**](https://github.com/Evans-Kwashie/INA219-Voltage_Sensing_PCB) | 4-layer current and power monitor with Kelvin-sense shunt routing |
-| [**UART to RS-485**](https://github.com/Evans-Kwashie/UART-2-RS-485-PCB) | Differential-pair RS-485 converter with TVS protection |
-| [**CH340C USB to UART**](https://github.com/Evans-Kwashie/CH340c-usb-uart-board) | First fully self-designed board, USB data lines to UART |
-
-### 🤖 Firmware and motion control
-
-| Project | What it does |
-|---|---|
-| [**Gyroscope-Controlled Car**](https://github.com/Evans-Kwashie/Gyroscope-Controlled-Car) | MPU6050 hand-orientation sensing drives an RC car over ESP-NOW with low latency |
-| [**ESP32 Air Mouse**](https://github.com/Evans-Kwashie/Esp32-Air-Mouse) | Wearable air mouse: Kalman-filtered IMU data sent as a BLE HID device |
-| [**Tiny Tanks**](https://github.com/Evans-Kwashie/Tiny-Tanks) | Dual-board real-time firmware project with a 3D-printed snap-fit chassis |
-
----
-
-### 🧰 Toolbox
-
-<div align="center">
-
-![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![MicroPython](https://img.shields.io/badge/MicroPython-2B2728?style=for-the-badge&logo=micropython&logoColor=white)
-
-![STM32](https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white)
-![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
-![Raspberry Pi Pico](https://img.shields.io/badge/RP2040-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white)
-![PlatformIO](https://img.shields.io/badge/PlatformIO-F5822A?style=for-the-badge&logo=platformio&logoColor=white)
-
-![ROS 2](https://img.shields.io/badge/ROS_2-22314E?style=for-the-badge&logo=ros&logoColor=white)
-![Betaflight](https://img.shields.io/badge/Betaflight-FFBB00?style=for-the-badge&logoColor=black)
-![Fusion 360](https://img.shields.io/badge/Fusion_360-0696D7?style=for-the-badge&logo=autodesk&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-</div>
-
-**Interfaces:** UART · RS-485 · I2C sensing · ESP-NOW · BLE · LoRa  
-**Hardware craft:** multi-layer PCB design · differential routing · TVS protection · Kelvin sensing · 3D-printed enclosures
-
----
-
-### 📡 Live from the bench
-
-<!-- LIVE:START -->
 ```text
-$ ls ~/bench   # public projects, newest push first
-UAV-PHMC                     STM32G071 drone payload controller with a ROS 2 digital twin
-INA219-Voltage_Sensing_PCB   4-layer current and power monitor, Kelvin-sense shunt
-CH340c-usb-uart-board        USB to UART board, first fully self-designed PCB
-UART-2-RS-485-PCB            RS-485 converter with differential pairs and TVS protection
-Gyroscope-Controlled-Car     MPU6050 hand-gesture RC car over ESP-NOW
-Tiny-Tanks                   dual-board real-time firmware, 3D-printed snap-fit chassis
-Esp32-Air-Mouse              wearable BLE air mouse with a Kalman-filtered IMU
+~/workbench $ ls
+UAV-PHMC/  INA219-Voltage_Sensing_PCB/  UART-2-RS-485-PCB/
+Gyroscope-Controlled-Car/  Tiny-Tanks/  Esp32-Air-Mouse/
 ```
-<sub>refreshed 2026-11-13 UTC by a scheduled workflow</sub>
-<!-- LIVE:END -->
 
-### 🎯 Now
-
-- Bringing up flight-controller firmware for the search-and-rescue drone
-- Building out payload electronics and telemetry for lightweight UAVs
-- Learning in public: every board and firmware project here started as a self-taught build
+<div align="center">
+  <sub>MAKE THE HARDWARE REAL. MAKE THE FIRMWARE RELIABLE.</sub>
+</div>
