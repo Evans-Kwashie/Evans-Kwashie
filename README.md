@@ -1,75 +1,82 @@
 <div align="center">
-  <img src="assets/flight-deck.svg" alt="Evans Kwashie — embedded systems, firmware, hardware and autonomous systems" width="100%">
+  <picture>
+    <source media="(prefers-color-scheme: light)" srcset="assets/hero-light.svg">
+    <img src="assets/hero.svg" alt="Evans Kwashie — embedded firmware, hardware design and autonomous systems" width="100%">
+  </picture>
 </div>
 
 <div align="center">
-  <a href="https://github.com/Evans-Kwashie">GitHub</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/evans-klenam-kwashie-seyram/">LinkedIn</a> &nbsp;·&nbsp; <a href="https://pcb-portfolio.vercel.app">Portfolio</a>
+  <a href="https://www.linkedin.com/in/evans-klenam-kwashie-seyram/">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="https://pcb-portfolio.vercel.app">Hardware Portfolio</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/Evans-Kwashie">GitHub</a>
 </div>
 
-## `01 / MISSION BRIEF`
+# Evans Kwashie
+### Embedded Firmware & Hardware · UAV & Autonomous Systems
 
-I build the electronics and firmware behind physical systems — from a schematic and a blank microcontroller to a working board, a reliable interface, and an integrated machine. My focus is embedded firmware, custom hardware, sensing, motion and UAV systems.
+I build the electronics and firmware behind physical systems — from circuit design and PCB layout to peripheral bring-up, low-level drivers and system integration.
 
-**Embedded Firmware & Hardware · UAV & Autonomous Systems**  
-B.Sc. Computer Science · University of Cape Coast, Ghana
+I'm a Computer Science student at the **University of Cape Coast, Ghana**, focused on embedded C/C++, microcontrollers, custom hardware and autonomous systems.
 
-```text
-$ systemctl status evans
-HARDWARE     ● online   KiCad / multilayer PCB / bring-up
-FIRMWARE     ● online   C / C++ / STM32 / ESP32
-INTERFACES   ● online   UART / I2C / SPI / RS-485 / BLE
-RTOS         ◐ learning Zephyr / concurrency / message queues
-EMBEDDED OS  ◐ learning Linux / low-level systems
-```
+---
 
-## `02 / FLIGHT & CONTROL`
+## 01 / Selected engineering work
 
-| PROJECT | BUILD NOTES |
+| PROJECT | WHAT I BUILT |
 |:--|:--|
-| [**UAV-PHMC**](https://github.com/Evans-Kwashie/UAV-PHMC) | 4-layer STM32G071 payload-management and health-monitoring controller; power monitoring, protected I/O and system interfaces |
-| **SAR Drone** · team capstone | Search-and-rescue quadcopter concept integrating flight-control electronics, mission computing, thermal imaging, GPS and LoRa telemetry |
+| [**UAV-PHMC**](https://github.com/Evans-Kwashie/UAV-PHMC) | Custom four-layer STM32G071-based UAV controller hardware. Includes power monitoring, protected I/O, UART/I²C/RS-485 interfaces, BOM, Gerbers, pick-and-place data and a 3D PCB model. |
+| [**STM32C031 Bare-Metal Firmware**](https://github.com/Evans-Kwashie/stm32c031-baremetal-firmware) | Register-level C with CMSIS: GPIO, TIM3 interrupts and a USART1 command interface. CMake + GNU Arm toolchain, with a NUCLEO-C031C6 Wokwi setup. |
+| [**INA219 Voltage Sensing PCB**](https://github.com/Evans-Kwashie/INA219-Voltage_Sensing_PCB) | Four-layer current and power-monitoring board with Kelvin-sense shunt routing, analogue filtering and I²C. |
+| [**UART-to-RS-485 PCB**](https://github.com/Evans-Kwashie/UART-2-RS-485-PCB) | Differential serial interface hardware with protection for field communication. |
+| [**CH340C USB-to-UART**](https://github.com/Evans-Kwashie/CH340c-usb-uart-board) | USB-to-UART interface board and an early end-to-end schematic-to-PCB build. |
+| [**ESP32 Air Mouse**](https://github.com/Evans-Kwashie/Esp32-Air-Mouse) | Wearable BLE HID mouse using MPU6050 motion sensing, Kalman filtering and gesture-based input. |
+| [**Gyroscope-Controlled Car**](https://github.com/Evans-Kwashie/Gyroscope-Controlled-Car) | Motion-controlled vehicle using IMU orientation and ESP-NOW communication. |
+| [**Tiny Tanks**](https://github.com/Evans-Kwashie/Tiny-Tanks) | Dual-board embedded control project paired with a 3D-printed chassis. |
 
-<img src="assets/signal-path.svg" alt="Sensor to MCU to control to actuator signal path" width="100%">
+> **UAV-PHMC status:** the repository contains the KiCad design and generated manufacturing outputs. Fabrication, assembly and flight validation are not claimed.
 
-## `03 / HARDWARE BUILDS`
+## 02 / Engineering workflow
 
-| PROJECT | ENGINEERING FOCUS |
+I enjoy working across the hardware/software boundary:
+
+`SPEC → SCHEMATIC → PCB LAYOUT → BRING-UP → FIRMWARE → INTEGRATION`
+
+<div align="center">
+  <img src="assets/signal-path.svg" alt="Embedded system signal path from sensors through a microcontroller to control and actuation" width="100%">
+</div>
+
+| AREA | EXPERIENCE & TOOLS |
 |:--|:--|
-| [**INA219 Voltage Sensing PCB**](https://github.com/Evans-Kwashie/INA219-Voltage_Sensing_PCB) | 4-layer current and power-monitoring board; Kelvin-sense shunt routing |
-| [**UART-2-RS-485-PCB**](https://github.com/Evans-Kwashie/UART-2-RS-485-PCB) | Differential serial interface with TVS protection |
-| [**CH340C USB-to-UART**](https://github.com/Evans-Kwashie/CH340c-usb-uart-board) | USB-to-UART interface; first fully self-designed PCB |
-
-## `04 / FIRMWARE & MOTION`
-
-| PROJECT | ENGINEERING FOCUS |
-|:--|:--|
-| [**Gyroscope-Controlled-Car**](https://github.com/Evans-Kwashie/Gyroscope-Controlled-Car) | MPU6050 hand-orientation sensing and ESP-NOW control |
-| [**ESP32 Air Mouse**](https://github.com/Evans-Kwashie/Esp32-Air-Mouse) | Kalman-filtered IMU data streamed as a BLE HID device |
-| [**Tiny Tanks**](https://github.com/Evans-Kwashie/Tiny-Tanks) | Dual-board real-time firmware and a 3D-printed snap-fit chassis |
-
-## `05 / ENGINEERING STACK`
-
-| DOMAIN | TOOLS & TECHNOLOGIES |
-|:--|:--|
-| **Firmware** | C · C++ · MicroPython · STM32 HAL · ESP-IDF |
-| **Platforms** | STM32 · ESP32 · RP2040 |
-| **Embedded** | GPIO · interrupts · timers · PWM · DMA · UART · I²C · SPI |
+| **Firmware** | C · C++ · Embedded C · MicroPython · CMSIS · STM32 HAL |
+| **MCUs** | STM32 · ESP32 · RP2040 |
+| **Peripherals** | GPIO · interrupts · timers · PWM · UART · I²C · SPI · DMA |
 | **Connectivity** | RS-485 · BLE · ESP-NOW · Wi-Fi · LoRa |
-| **Hardware** | KiCad · schematic capture · multilayer PCB layout · DRC · bring-up |
-| **Tooling** | Git · Linux · VS Code · CMake · GDB |
+| **Hardware** | KiCad · schematic capture · multilayer PCB layout · DRC · board bring-up |
+| **Build & debug** | CMake · Ninja · GNU Arm GCC · GDB · Git · Linux |
 
-## `06 / CURRENT FLIGHT PLAN`
+## 03 / Current workbench
 
-- Developing firmware and payload electronics for a search-and-rescue UAV.
-- Learning Zephyr RTOS through threads, message queues and application design.
-- Strengthening embedded Linux and low-level systems foundations.
+- **Zephyr RTOS** — learning threads, scheduling, message queues and driver/application structure through hands-on projects.
+- **Embedded Linux** — building foundations in Linux internals, boot flow and low-level systems.
+- **Bare-metal STM32** — strengthening register-level peripheral control and understanding what happens beneath vendor HALs.
+- **UAV electronics** — developing practical experience in power distribution, sensing, interfaces and hardware integration.
 
-```text
-~/workbench $ ls
-UAV-PHMC/  INA219-Voltage_Sensing_PCB/  UART-2-RS-485-PCB/
-Gyroscope-Controlled-Car/  Tiny-Tanks/  Esp32-Air-Mouse/
-```
+## 04 / Beyond the bench
+
+I'm also part of a team developing a **search-and-rescue UAV concept**, bringing together flight-control electronics, mission computing, thermal imaging, GPS and telemetry.
+
+I value engineering that can be inspected, built, measured and debugged — not just code that compiles.
+
+---
 
 <div align="center">
-  <sub>MAKE THE HARDWARE REAL. MAKE THE FIRMWARE RELIABLE.</sub>
+  **DESIGN THE HARDWARE. UNDERSTAND THE FIRMWARE. MAKE THE SYSTEM WORK.**
+  <br><br>
+  <a href="https://github.com/Evans-Kwashie">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/evans-klenam-kwashie-seyram/">LinkedIn</a>
+  &nbsp;·&nbsp;
+  <a href="https://pcb-portfolio.vercel.app">Portfolio</a>
 </div>
