@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the live block in README.md with the latest commit of each recently pushed public repo."""
+"""Refresh the live block in README.md with the public projects, newest push first."""
 import datetime as dt
 import json
 import os
@@ -9,6 +9,17 @@ import urllib.request
 
 USER = os.environ.get("GH_USER", "Evans-Kwashie")
 TOKEN = os.environ.get("GH_TOKEN", "")
+
+# Short blurbs shown in the profile. Falls back to the repo description on GitHub.
+BLURBS = {
+    "UAV-PHMC": "STM32G071 drone payload controller with a ROS 2 digital twin",
+    "INA219-Voltage_Sensing_PCB": "4-layer current and power monitor, Kelvin-sense shunt",
+    "CH340c-usb-uart-board": "USB to UART board, first fully self-designed PCB",
+    "UART-2-RS-485-PCB": "RS-485 converter with differential pairs and TVS protection",
+    "Gyroscope-Controlled-Car": "MPU6050 hand-gesture RC car over ESP-NOW",
+    "Tiny-Tanks": "dual-board real-time firmware, 3D-printed snap-fit chassis",
+    "Esp32-Air-Mouse": "wearable BLE air mouse with a Kalman-filtered IMU",
+}
 
 
 def api(path):
@@ -20,37 +31,26 @@ def api(path):
         return json.load(resp)
 
 
-def ago(ts):
-    then = dt.datetime.strptime(ts, "%Y-%m-%dT%H:%M:%SZ")
-    secs = max(0, int((dt.datetime.utcnow() - then).total_seconds()))
-    for size, unit in ((86400 * 30, "mo"), (86400, "d"), (3600, "h"), (60, "m")):
-        if secs >= size:
-            return f"{secs // size}{unit} ago"
-    return "just now"
-
-
 repos = [
-    r for r in api(f"/users/{USER}/repos?sort=pushed&per_page=30&type=owner")
+    r for r in api(f"/users/{USER}/repos?sort=pushed&per_page=50&type=owner")
     if not r["fork"] and r["name"].lower() != USER.lower()
 ]
 
 rows = []
-for repo in repos[:6]:
-    try:
-        commit = api(f"/repos/{USER}/{repo['name']}/commits?per_page=1")[0]
-    except Exception:
-        continue
-    msg = commit["commit"]["message"].splitlines()[0][:44]
-    rows.append((commit["sha"][:7], repo["name"][:26], ago(commit["commit"]["author"]["date"]), msg))
+for repo in repos[:8]:
+    blurb = BLURBS.get(repo["name"]) or (repo.get("description") or "").strip()
+    if not blurb:
+        blurb = repo.get("language") or "work in progress"
+    rows.append((repo["name"][:28], blurb[:62]))
 
 if not rows:
-    sys.exit("no commits found, leaving README untouched")
+    sys.exit("no repositories found, leaving README untouched")
 
-body = "\n".join(f"{sha}  {name:<26} {when:>8}  {msg}" for sha, name, when, msg in rows)
+body = "\n".join(f"{name:<28} {blurb}" for name, blurb in rows)
 stamp = dt.datetime.utcnow().strftime("%Y-%m-%d")
 block = (
     "<!-- LIVE:START -->\n```text\n"
-    "$ git log --oneline   # latest commit per repo\n"
+    "$ ls ~/bench   # public projects, newest push first\n"
     f"{body}\n```\n<sub>refreshed {stamp} UTC by a scheduled workflow</sub>\n"
     "<!-- LIVE:END -->"
 )
