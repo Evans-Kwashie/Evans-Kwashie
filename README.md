@@ -101,8 +101,15 @@ I design the board, write the firmware that runs on it, and debug the two togeth
 
 <!-- LIVE:START -->
 ```text
-$ git log --oneline   # first refresh pending
+$ git log --oneline   # latest commit per repo
+c4413ab  UAV-PHMC                    3mo ago  Merge pull request #9 from Evans-Kwashie/dev
+1a89210  INA219-Voltage_Sensing_PCB  3mo ago  Added readme
+fd63ecf  CH340c-usb-uart-board       4mo ago  edited
+86ec317  UART-2-RS-485-PCB           4mo ago  Merge branch 'main' of https://github.com/Ra
+e748e09  Gyroscope-Controlled-Car    4mo ago  Add files via upload
+774c9ef  Tiny-Tanks                  4mo ago  Delete IMG-20260625-WA0026.jpg
 ```
+<sub>refreshed 2026-11-13 UTC by a scheduled workflow</sub>
 <!-- LIVE:END -->
 
 ### 🎯 Now
