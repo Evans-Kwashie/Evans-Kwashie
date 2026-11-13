@@ -101,13 +101,14 @@ I design the board, write the firmware that runs on it, and debug the two togeth
 
 <!-- LIVE:START -->
 ```text
-$ git log --oneline   # latest commit per repo
-c4413ab  UAV-PHMC                    3mo ago  Merge pull request #9 from Evans-Kwashie/dev
-1a89210  INA219-Voltage_Sensing_PCB  3mo ago  Added readme
-fd63ecf  CH340c-usb-uart-board       4mo ago  edited
-86ec317  UART-2-RS-485-PCB           4mo ago  Merge branch 'main' of https://github.com/Ra
-e748e09  Gyroscope-Controlled-Car    4mo ago  Add files via upload
-774c9ef  Tiny-Tanks                  4mo ago  Delete IMG-20260625-WA0026.jpg
+$ ls ~/bench   # public projects, newest push first
+UAV-PHMC                     STM32G071 drone payload controller with a ROS 2 digital twin
+INA219-Voltage_Sensing_PCB   4-layer current and power monitor, Kelvin-sense shunt
+CH340c-usb-uart-board        USB to UART board, first fully self-designed PCB
+UART-2-RS-485-PCB            RS-485 converter with differential pairs and TVS protection
+Gyroscope-Controlled-Car     MPU6050 hand-gesture RC car over ESP-NOW
+Tiny-Tanks                   dual-board real-time firmware, 3D-printed snap-fit chassis
+Esp32-Air-Mouse              wearable BLE air mouse with a Kalman-filtered IMU
 ```
 <sub>refreshed 2026-11-13 UTC by a scheduled workflow</sub>
 <!-- LIVE:END -->
