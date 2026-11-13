@@ -25,7 +25,7 @@ I build the electronics and firmware that make physical systems work. My work sp
 **Interfaces**  
 ![UART](https://img.shields.io/badge/UART-1565C0?style=for-the-badge) ![I2C](https://img.shields.io/badge/I2C-00897B?style=for-the-badge) ![SPI](https://img.shields.io/badge/SPI-6A1B9A?style=for-the-badge) ![RS-485](https://img.shields.io/badge/RS--485-455A64?style=for-the-badge) ![CAN](https://img.shields.io/badge/CAN-EF6C00?style=for-the-badge)
 
-## Selected work
+## Highlights
 
 ### Boards
 
