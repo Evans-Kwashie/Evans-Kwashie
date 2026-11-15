@@ -72,7 +72,7 @@ Gyroscope-Controlled-Car     MPU6050 hand-gesture RC car over ESP-NOW
 Tiny-Tanks                   dual-board real-time firmware, 3D-printed snap-fit chassis
 Esp32-Air-Mouse              wearable BLE air mouse with a Kalman-filtered IMU
 ```
-<sub>refreshed 2026-11-14 UTC by a scheduled workflow</sub>
+<sub>refreshed 2026-11-15 UTC by a scheduled workflow</sub>
 <!-- LIVE:END -->
 
 </details>
