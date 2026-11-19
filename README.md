@@ -30,7 +30,7 @@ I build the electronics and firmware that make physical systems work. My work sp
 ### Boards
 
 **01 · [UAV-PHMC](https://github.com/Evans-Kwashie/UAV-PHMC)**  
-Four-layer STM32G071 payload-management controller with power monitoring, protected I/O, and UART, I²C and RS-485 interfaces.
+Four-layer STM32G071 payload-management controller with power monitoring, protected I/O, and UART and I²C interfaces.
 
 **02 · [INA219 Voltage Sensing PCB](https://github.com/Evans-Kwashie/INA219-Voltage_Sensing_PCB)**  
 Four-layer current and power-monitoring board with Kelvin-sense shunt routing and INA219 measurement.
@@ -63,8 +63,8 @@ Building stronger foundations in RTOS architecture, embedded Linux and low-level
 <!-- LIVE:START -->
 ```text
 $ ls ~/bench   # public projects, newest push first
-UAV-PHMC                     STM32G071 drone payload controller with a ROS 2 digital twin
-UART-2-RS-485-PCB            RS-485 converter with differential pairs and TVS protection
+UAV-PHMC                     STM32G071 drone payload controller
+UART-2--PCB             converter with differential pairs and TVS protection
 INA219-Voltage_Sensing_PCB   4-layer current and power monitor, Kelvin-sense shunt
 CH340c-usb-uart-board        USB to UART board, first fully self-designed PCB
 stm32c031-baremetal-firmware Bare-metal STM32C031 firmware in C featuring register-level pr
