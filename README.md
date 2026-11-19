@@ -64,7 +64,7 @@ Building stronger foundations in RTOS architecture, embedded Linux and low-level
 ```text
 $ ls ~/bench   # public projects, newest push first
 UAV-PHMC                     STM32G071 drone payload controller
-UART-2--PCB             converter with differential pairs and TVS protection
+UART-2--RS-485 PCB             converter with differential pairs and TVS protection
 INA219-Voltage_Sensing_PCB   4-layer current and power monitor, Kelvin-sense shunt
 CH340c-usb-uart-board        USB to UART board, first fully self-designed PCB
 stm32c031-baremetal-firmware Bare-metal STM32C031 firmware in C featuring register-level pr
