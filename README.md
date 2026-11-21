@@ -63,6 +63,7 @@ Building stronger foundations in RTOS architecture, embedded Linux and low-level
 <!-- LIVE:START -->
 ```text
 $ ls ~/bench   # public projects, newest push first
+mech-royale-bot              Python
 UAV-PHMC                     STM32G071 drone payload controller with a ROS 2 digital twin
 UART-2-RS-485-PCB            RS-485 converter with differential pairs and TVS protection
 INA219-Voltage_Sensing_PCB   4-layer current and power monitor, Kelvin-sense shunt
@@ -70,9 +71,8 @@ CH340c-usb-uart-board        USB to UART board, first fully self-designed PCB
 stm32c031-baremetal-firmware Bare-metal STM32C031 firmware in C featuring register-level pr
 Gyroscope-Controlled-Car     MPU6050 hand-gesture RC car over ESP-NOW
 Tiny-Tanks                   dual-board real-time firmware, 3D-printed snap-fit chassis
-Esp32-Air-Mouse              wearable BLE air mouse with a Kalman-filtered IMU
 ```
-<sub>refreshed 2026-11-20 UTC by a scheduled workflow</sub>
+<sub>refreshed 2026-11-21 UTC by a scheduled workflow</sub>
 <!-- LIVE:END -->
 
 </details>
