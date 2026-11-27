@@ -72,7 +72,7 @@ stm32c031-baremetal-firmware Bare-metal STM32C031 firmware in C featuring regist
 Gyroscope-Controlled-Car     MPU6050 hand-gesture RC car over ESP-NOW
 Tiny-Tanks                   dual-board real-time firmware, 3D-printed snap-fit chassis
 ```
-<sub>refreshed 2026-11-26 UTC by a scheduled workflow</sub>
+<sub>refreshed 2026-11-27 UTC by a scheduled workflow</sub>
 <!-- LIVE:END -->
 
 </details>
